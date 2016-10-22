@@ -5,19 +5,19 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/menu_button1"
+        android:id="@+id/menu_author"
         android:orderInCategory="50"
         android:title="@string/button_text"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/menu_button2"
+        android:id="@+id/menu_refresh"
         android:orderInCategory="100"
         android:title="@string/menu_refresh"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/menu_button3"
+        android:id="@+id/menu_egg"
         android:orderInCategory="200"
         android:title="@string/menu_kittens"
         app:showAsAction="never"/>

@@ -11,30 +11,32 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    ImageView easterEggView;
+    TextView authorNameTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView im = (ImageView)findViewById(R.id.imageView2);
-        im.setVisibility(View.INVISIBLE);
+        easterEggView = (ImageView)findViewById(R.id.eggImageView);
+        authorNameTextView = (TextView)findViewById(R.id.authorInfoTextView);
+        easterEggView.setVisibility(View.INVISIBLE);
 
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        TextView sayMyName = (TextView)findViewById(R.id.textView);
-        ImageView im = (ImageView)findViewById(R.id.imageView2);
         switch(id){
-            case R.id.menu_button1:
-                sayMyName.setText(R.string.author_info);
+            case R.id.menu_author:
+                authorNameTextView.setText(R.string.author_info);
                 return true;
-            case R.id.menu_button2:
-                sayMyName.setText("");
-                im.setVisibility(View.INVISIBLE);
+            case R.id.menu_refresh:
+                authorNameTextView.setText("");
+                easterEggView.setVisibility(View.INVISIBLE);
                 return true;
-            case R.id.menu_button3:
-                im.setVisibility(View.VISIBLE);
+            case R.id.menu_egg:
+                authorNameTextView.setVisibility(View.VISIBLE);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -49,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClicked(View view) {
-        TextView sayMyName = (TextView)findViewById(R.id.textView);
-        sayMyName.setText(R.string.author_info);
+        authorNameTextView.setText(R.string.author_info);
     }
 }
