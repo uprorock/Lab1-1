@@ -36,6 +36,6 @@
         app:srcCompat="@drawable/norm_al"
         android:layout_centerHorizontal="true"
         android:id="@+id/eggImageView"
-        android:layout_alignParentTop="true" />
+        android:layout_below="@+id/authorButton" />
 
 </RelativeLayout>

@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 easterEggView.setVisibility(View.INVISIBLE);
                 return true;
             case R.id.menu_egg:
-                authorNameTextView.setVisibility(View.VISIBLE);
+                easterEggView.setVisibility(View.VISIBLE);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
