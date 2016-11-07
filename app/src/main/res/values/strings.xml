@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Lab1</string>
+    <string name="app_name">Lab2</string>
     <string name="button_text">Author</string>
     <string name="author_info">Grigoryev I.D., M091501(72)</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_kittens">Easter egg</string>
+    <string name="menu_recall">Leave recall</string>
 </resources>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Лабораторная работа 1</string>
+    <string name="app_name">Лабораторная работа 2</string>
     <string name="button_text">Автор</string>
     <string name="author_info">Григорьев И.Д., М091501(72)</string>
     <string name="menu_refresh">Обновить</string>
     <string name="menu_kittens">Пасхалка</string>
+    <string name="menu_recall">Оставить отзыв</string>
 </resources>

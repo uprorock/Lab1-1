@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView easterEggView;
     TextView authorNameTextView;
+    final int RECALL_DIALOG = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.menu_egg:
                 easterEggView.setVisibility(View.VISIBLE);
+                return true;
+            case R.id.menu_recall:
+                showDialog(RECALL_DIALOG);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

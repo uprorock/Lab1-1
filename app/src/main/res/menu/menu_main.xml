@@ -21,4 +21,8 @@
         android:orderInCategory="200"
         android:title="@string/menu_kittens"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/menu_recall"
+        android:title="@string/menu_recall"
+        android:orderInCategory="201" />
 </menu>
