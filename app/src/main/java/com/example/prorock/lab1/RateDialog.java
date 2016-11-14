@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -35,6 +36,15 @@ public class RateDialog extends android.support.v4.app.DialogFragment implements
 
     @Override
     public void onClick(View v) {
+        int id = ((Button)v).getId();
+        switch (id) {
+            case R.id.button_rate:
+
+            break;
+            case R.id.button_close:
+                dismiss();
+            break;
+        }
 
     }
 
