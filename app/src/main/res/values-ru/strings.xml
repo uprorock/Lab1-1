@@ -6,9 +6,10 @@
     <string name="menu_refresh">Обновить</string>
     <string name="menu_kittens">Пасхалка</string>
     <string name="menu_recall">Оставить отзыв</string>
-    <string name="rate_this_app">Пожалуйста, оцените приложение!</string>
+    <string name="rate_this_app">Оцените приложение!</string>
     <string name="leave_recall_text">Если хотите, то напишите отзыв о приложении:</string>
     <string name="recall_editText">Ваш отзыв</string>
     <string name="button_rate">Оценить!</string>
     <string name="button_closeRatingDialog">Закрыть</string>
+    <string name="toast_thanks">Спасибо, Ваш отзыв был отправлен!</string>
 </resources>
