@@ -5,4 +5,11 @@
     <string name="menu_refresh">Refresh</string>
     <string name="menu_kittens">Easter egg</string>
     <string name="menu_recall">Leave recall</string>
+    <string name="rate_this_app">Rate this App!</string>
+    <string name="leave_recall_text">Leave a recall if you want:</string>
+    <string name="recall_editText">Your recall</string>
+    <string name="button_rate">Rate!</string>
+    <string name="button_closeRatingDialog">Close</string>
+
+
 </resources>

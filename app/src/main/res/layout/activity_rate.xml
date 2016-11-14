@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_dialog_layout_design_user_rate_radio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_this_app"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/rateAppRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="-25dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp">
+        <RadioButton
+            android:id="@+id/radio_0"
+            android:text="0"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:text="1"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:text="2"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:text="3"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/radio_4"
+            android:text="4"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+        <RadioButton
+            android:id="@+id/radio_5"
+            android:text="5"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableBottom="@android:drawable/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dialogOptionalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/leave_recall_text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/userInputTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/recall_editText"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/button_rate"
+            android:text="@string/button_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_close"
+            android:text="@string/button_closeRatingDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

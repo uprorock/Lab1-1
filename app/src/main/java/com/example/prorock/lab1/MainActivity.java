@@ -1,6 +1,7 @@
 package com.example.prorock.lab1;
 
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,12 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.support.v4.app.DialogFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView easterEggView;
     TextView authorNameTextView;
-    final int RECALL_DIALOG = 1;
+    //final int RECALL_DIALOG = 1;
+    android.support.v4.app.DialogFragment ratingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         authorNameTextView = (TextView)findViewById(R.id.authorInfoTextView);
         easterEggView.setVisibility(View.INVISIBLE);
 
+        ratingDialog = new RateDialog();
     }
 
     @Override
@@ -40,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 easterEggView.setVisibility(View.VISIBLE);
                 return true;
             case R.id.menu_recall:
-                showDialog(RECALL_DIALOG);
+
+                ratingDialog.show(getSupportFragmentManager(), "ratingDialog");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
