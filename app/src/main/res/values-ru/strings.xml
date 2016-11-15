@@ -12,4 +12,6 @@
     <string name="button_rate">Оценить!</string>
     <string name="button_closeRatingDialog">Закрыть</string>
     <string name="toast_thanks">Спасибо, Ваш отзыв был отправлен!</string>
+    <string name="rate_progress_title">Отправка оценки</string>
+    <string name="rate_progress_plsWait">Пожалуйста, подождите...</string>
 </resources>

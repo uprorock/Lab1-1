@@ -11,6 +11,7 @@
     <string name="button_rate">Rate!</string>
     <string name="button_closeRatingDialog">Close</string>
     <string name="toast_thanks">Thank you for your recall!</string>
-
+    <string name="rate_progress_title">Sending your rating</string>
+    <string name="rate_progress_plsWait">Please, wait...</string>
 
 </resources>
