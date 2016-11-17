@@ -12,6 +12,14 @@
     <string name="button_rate">Оценить!</string>
     <string name="button_closeRatingDialog">Закрыть</string>
     <string name="toast_thanks">Спасибо, Ваш отзыв был отправлен!</string>
-    <string name="rate_progress_title">Отправка оценки</string>
+    <string name="menu_applist">Список приложений</string>
+    <string name="action_about">О программе</string>
+    <string name="about_title">ТАИТЛ</string>
+    <string name="about_desc">ДЕСКРИПШН</string>
+    <string name="rate_progress_title">Оценка отправляется</string>
     <string name="rate_progress_plsWait">Пожалуйста, подождите...</string>
+    <string name="menu_applist_copyName">Копировать название</string>
+    <string name="menu_applist_copyPacketName">Копировать имя пакета</string>
+    <string name="menu_applist_info">Информация</string>
+    <string name="toast_copy_done">Скопировано в буфер обмена</string>
 </resources>
