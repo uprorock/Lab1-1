@@ -20,7 +20,7 @@
     <string name="menu_applist_copyName">Copy name</string>
     <string name="menu_applist_copyPacketName">Copy packet name</string>
     <string name="menu_applist_info">Application info</string>
-    <string name="toast_copy_done">Copied in buffer</string>
+    <string name="toast_copy_done">"Copied in clipboard: "</string>
 
 
 </resources>

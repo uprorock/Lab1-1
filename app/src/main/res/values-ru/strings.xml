@@ -21,5 +21,5 @@
     <string name="menu_applist_copyName">Копировать название</string>
     <string name="menu_applist_copyPacketName">Копировать имя пакета</string>
     <string name="menu_applist_info">Информация</string>
-    <string name="toast_copy_done">Скопировано в буфер обмена</string>
+    <string name="toast_copy_done">"Скопировано в буфер обмена: "</string>
 </resources>
