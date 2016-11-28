@@ -2,6 +2,7 @@ package com.example.prorock.lab1;
 
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView easterEggView;
     TextView authorNameTextView;
-    //final int RECALL_DIALOG = 1;
     android.support.v4.app.DialogFragment ratingDialog;
 
     @Override
@@ -44,8 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 easterEggView.setVisibility(View.VISIBLE);
                 return true;
             case R.id.menu_recall:
-
                 ratingDialog.show(getSupportFragmentManager(), "ratingDialog");
+                return true;
+            case R.id.menu_applist:
+                Intent intent = new Intent(MainActivity.this, AppListActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
