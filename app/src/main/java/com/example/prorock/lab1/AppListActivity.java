@@ -11,8 +11,10 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -26,7 +28,8 @@ import android.widget.Toast;
 import android.content.ClipboardManager;
 
 
-public class AppListActivity extends AppCompatActivity implements AdapterView.OnItemLongClickListener{
+public class AppListActivity extends AppCompatActivity implements AdapterView.OnItemLongClickListener,
+        SearchView.OnQueryTextListener {
     private PackageManager packageManager = null;
     private List<ApplicationInfo> applist = null;
     private ApplicationAdapter listadaptor = null;
@@ -77,6 +80,17 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
         });
 
         new LoadApplications().execute();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setOnQueryTextListener(this);
+
+        return true;
     }
 
     @Override
@@ -131,6 +145,16 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
         return false;
     }
 

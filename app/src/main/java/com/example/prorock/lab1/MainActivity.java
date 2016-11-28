@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_recall:
                 ratingDialog.show(getSupportFragmentManager(), "ratingDialog");
                 return true;
-            case R.id.menu_applist:
+            case R.id.menu_appList:
                 Intent intent = new Intent(MainActivity.this, AppListActivity.class);
                 startActivity(intent);
                 return true;

@@ -26,7 +26,7 @@
         android:title="@string/menu_recall"
         android:orderInCategory="201" />
     <item
-        android:id="@+id/menu_applist"
+        android:id="@+id/menu_appList"
         android:title="@string/menu_applist"
         android:orderInCategory="202" />
 </menu>
