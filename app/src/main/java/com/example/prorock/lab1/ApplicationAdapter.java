@@ -17,16 +17,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
     private List<ApplicationInfo> appsList = null;
     private Context context;
     private PackageManager packageManager;
-    String filterString = null;
 
-    public ApplicationAdapter(Context context, int textViewResourceId,
-                              List<ApplicationInfo> appsList, String filterStr) {
-        super(context, textViewResourceId, appsList);
-        this.context = context;
-        this.appsList = appsList;
-        packageManager = context.getPackageManager();
-        filterString = filterStr;
-    }
 
     public ApplicationAdapter(Context context, int textViewResourceId,
                               List<ApplicationInfo> appsList) {
@@ -61,17 +52,14 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
         }
 
         ApplicationInfo applicationInfo = appsList.get(position);
-        if (filterString == null || applicationInfo.loadLabel(packageManager).toString().toLowerCase().contains(filterString.toLowerCase())) {
-            if (null != applicationInfo ) {
-                TextView appName = (TextView) view.findViewById(R.id.app_name);
-                TextView packageName = (TextView) view.findViewById(R.id.app_paackage);
-                ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);
+        if (null != applicationInfo ) {
+            TextView appName = (TextView) view.findViewById(R.id.app_name);
+            TextView packageName = (TextView) view.findViewById(R.id.app_paackage);
+            ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);
 
-                appName.setText(applicationInfo.loadLabel(packageManager));
-                packageName.setText(applicationInfo.packageName);
-                iconview.setImageDrawable(applicationInfo.loadIcon(packageManager));
-            }
-            return view;
+            appName.setText(applicationInfo.loadLabel(packageManager));
+            packageName.setText(applicationInfo.packageName);
+            iconview.setImageDrawable(applicationInfo.loadIcon(packageManager));
         }
 
         return view;

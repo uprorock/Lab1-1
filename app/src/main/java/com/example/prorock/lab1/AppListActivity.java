@@ -161,8 +161,18 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public boolean onQueryTextChange(String newText) {
+        applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
+
+        Iterator<ApplicationInfo> appListIterator = applist.iterator();
+        while (appListIterator.hasNext()) {
+            String appLabel = appListIterator.next().loadLabel(packageManager).toString().toLowerCase();
+            if (!appLabel.contains(newText.toLowerCase())) {
+                appListIterator.remove();
+            }
+        }
+
         listadaptor = new ApplicationAdapter(AppListActivity.this,
-                R.layout.list_row, applist, newText);
+                R.layout.list_row, applist);
         listview.setAdapter(listadaptor);
         return true;
     }
