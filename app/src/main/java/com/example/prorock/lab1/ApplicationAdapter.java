@@ -62,7 +62,7 @@ public class ApplicationAdapter extends ArrayAdapter<ApplicationInfo> {
 
         ApplicationInfo applicationInfo = appsList.get(position);
         if (filterString == null || applicationInfo.loadLabel(packageManager).toString().toLowerCase().contains(filterString.toLowerCase())) {
-            if (null != applicationInfo) {
+            if (null != applicationInfo ) {
                 TextView appName = (TextView) view.findViewById(R.id.app_name);
                 TextView packageName = (TextView) view.findViewById(R.id.app_paackage);
                 ImageView iconview = (ImageView) view.findViewById(R.id.app_icon);
