@@ -1,5 +1,7 @@
 package com.example.prorock.lab1;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
@@ -15,6 +17,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -32,6 +35,7 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
         SearchView.OnQueryTextListener {
     private PackageManager packageManager = null;
     private List<ApplicationInfo> applist = null;
+    //private List<ApplicationInfo> filteredAppList = null;
     private ApplicationAdapter listadaptor = null;
     int listPosition;
     ListView listview;
@@ -39,7 +43,7 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_ACTION_BAR);
+        //requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_app_list);
 
         listview = (ListView)findViewById(android.R.id.list);
@@ -56,6 +60,8 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
 
         registerForContextMenu(listview);
         packageManager = getPackageManager();
+
+        //listview.setTextFilterEnabled(true);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -155,7 +161,10 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        return false;
+        listadaptor = new ApplicationAdapter(AppListActivity.this,
+                R.layout.list_row, applist, newText);
+        listview.setAdapter(listadaptor);
+        return true;
     }
 
     private class LoadApplications extends AsyncTask<Void, Void, Void> {
