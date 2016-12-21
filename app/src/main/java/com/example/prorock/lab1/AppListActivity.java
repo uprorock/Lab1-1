@@ -35,7 +35,6 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
         SearchView.OnQueryTextListener {
     private PackageManager packageManager = null;
     private List<ApplicationInfo> applist = null;
-    //private List<ApplicationInfo> filteredAppList = null;
     private ApplicationAdapter listadaptor = null;
     int listPosition;
     ListView listview;
@@ -86,17 +85,6 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
         });
 
         new LoadApplications().execute();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        searchView.setOnQueryTextListener(this);
-
-        return true;
     }
 
     @Override
@@ -203,8 +191,9 @@ public class AppListActivity extends AppCompatActivity implements AdapterView.On
 
         @Override
         protected void onPreExecute() {
+
             progress = ProgressDialog.show(AppListActivity.this, null,
-                    "Loading application info...");
+                    getResources().getString(R.string.progress_text));
             super.onPreExecute();
         }
 
